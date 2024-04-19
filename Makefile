@@ -74,4 +74,4 @@ clean:
 	rm -rf $(NAME_OF_THE_OBJECTS_OF_THE_LIBRARY) $(NAME_OF_THE_OBJECTS_OF_THE_TESTS)
 
 memory_check: test
-	valgrind -s --leak-check=full --show-leak-kinds=all --leak-resolution=med --track-origins=yes --verbose --log-file=$(MEM_CHECK_FILE) ./$(NAME_OF_TEST_EXECUTABLE)
+	valgrind -s --leak-check=full --show-leak-kinds=all --leak-resolution=high --track-origins=yes --error-limit=no --verbose --log-file=$(MEM_CHECK_FILE) ./$(NAME_OF_TEST_EXECUTABLE)
